@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %} {% block main_aside %}
+
+<main class="uk-container-large uk-margin-auto">
+    {#
+    <h1>{{article.title}}</h1> #}
+    <form action="" method="post">{% csrf_token %} 
+        {{ form.as_p }}
+        <input type="submit" value="Save" />
+    </form>
+    <div class="uk-card uk-card-default">
+        <div class="uk-card-media-top">
+            <img src={{article.cover.url}} alt="">
+        </div>
+        <div class="uk-card-body">
+            <h3 class="uk-card-title">{{article.title}}</h3>
+            <p>{{ article.short_descr }}</p>
+            <h5>{{article.category}}</h5>
+        </div>
+    </div>
+
+</main>
+{% endblock %}

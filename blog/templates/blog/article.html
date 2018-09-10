@@ -1,0 +1,36 @@
+<div class="uk-card uk-card-default">
+    <div class="uk-card-media-top">
+        <a href={% url "article-detail" article.slug %}>
+            <img src={{article.cover.url}} alt="">
+        </a>
+    </div>
+    <div class="uk-card-body">
+        <h3 class="uk-card-title">{{article.title}}</h3>
+        <p>{{ article.short_descr }}</p>
+        <h5>{{article.category}}</h5>
+
+        <!-- comment -->
+        {% for comment in article.comment_set.all %}
+        <article class="uk-comment">
+            <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+                <div class="uk-width-expand">
+                    <h4 class="uk-comment-title uk-margin-remove">
+                        <a class="uk-link-reset" href="#">
+                            {{comment.full_name}}
+                        </a>
+                    </h4>
+                    <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                        <li><a href="#">{{comment.date}}</a></li>
+                        <li><a href="{% url 'comment-create' %}">Reply</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="uk-comment-body">
+                <p>
+                    {{comment.messages}}
+                </p>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</div>

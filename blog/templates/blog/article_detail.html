@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+
+{% block main_aside %}
+
+<main class="uk-container-large uk-margin-auto">
+    <h1>{{article.title}}</h1>
+    {% include "blog/articleDetail.html" %}
+
+</main>
+
+{% endblock %}

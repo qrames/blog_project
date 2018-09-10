@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Edit Article</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!-- CHOISIR bootstrap ou reset.css -->
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href={% static "uikit/dist/css/uikit.min.css" %}>
+    <!-- <link rel="stylesheet" href="css/reset.css" /> -->
+    <link rel="stylesheet" href={% static 'css/style.css' %} />
+    <link  href={% static "@chenfengyuan/datepicker/dist/datepicker.min.css" %} rel="stylesheet">
+    <!-- chome line -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+    {% include "blog/header.html" %}
+    {% block main_aside %}{% endblock %}
+
+    {% include "blog/footer.html" %}
+    <!-- jquery -->
+    <script type="text/javascript" src={% static "jquery/dist/jquery.min.js" %}></script>
+    <!-- external script -->
+    <script type="text/javascript" src={% static "uikit/dist/js/uikit.min.js" %}>
+    </script>
+    <script src={% static "@chenfengyuan/datepicker/dist/datepicker.min.js" %}></script>
+    <script type="text/javascript" src={% static "@chenfengyuan/datepicker/i18n/datepicker.fr-FR.js" %}>
+
+    </script>
+    <!-- my script -->
+    <script type="text/javascript" src={% static "js/script.js" %}></script>
+</body>
+
+</html>

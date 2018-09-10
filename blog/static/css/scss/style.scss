@@ -1,0 +1,39 @@
+body {
+    background: rgb(47, 47, 47);
+}
+nav {
+    background: rgba(0, 38, 52, 0.89);
+}
+
+.uk-card-media-top {
+     >a>img {
+        width: 100%;
+    }
+}
+#container-grid{
+    margin: 1rem;
+    >*:first{
+        padding: 0;
+    }
+}
+aside {
+    background: rgb(60, 89, 110);
+    .uk-search-input {
+        margin: 1rem auto 0 auto;
+        color: white;
+    }
+}
+footer {
+    margin-top: 5rem;
+    text-align: center;
+    background: rgb(9, 12, 46);
+    line-height: 5rem;
+}
+#datepicker {
+    border: none !important;
+    box-shadow: none !important;
+    position: static;
+    &::after{
+        display: none;
+    }
+}

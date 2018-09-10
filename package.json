@@ -7,5 +7,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Quentin",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qrames/blog_project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qrames/blog_project/issues"
+  },
+  "homepage": "https://github.com/qrames/blog_project#readme",
+  "dependencies": {
+    "@chenfengyuan/datepicker": "^1.0.0",
+    "jquery": "^3.3.1",
+    "uikit": "^3.0.0-rc.14"
+  }
 }
